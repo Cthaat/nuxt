@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    '@element-plus/nuxt',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     (_options, nuxt) => {
