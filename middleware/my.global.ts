@@ -1,4 +1,6 @@
-export default defineNuxtRouteMiddleware((to, from) => { 
+export default defineNuxtRouteMiddleware((to) => { 
     console.log(to.path);
-    console.log(from.path);
+    if (to.path !== '/user/123') {
+        return navigateTo('/user/123');
+    }
 });
