@@ -1,4 +1,4 @@
 export default defineNuxtRouteMiddleware((to, from) => { 
-    console.log(to);
-    console.log(from);
+    console.log(to.path);
+    console.log(from.path);
 });
