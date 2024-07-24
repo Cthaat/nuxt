@@ -1,7 +1,7 @@
 <template>
     <div>
-        <button @click="countStore.addCount">add</button>
-        <button @click="countStore.subCount">subtract</button>
+        <v-btn @click="countStore.addCount">add</v-btn>
+        <v-btn @click="countStore.subCount">subtract</v-btn>
         <p>{{ countStore.count }}</p>
     </div>
 </template>

@@ -12,19 +12,24 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.12.4",
     "pinia": "^2.1.7",
     "vue": "latest"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.9",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "element-plus": "^2.7.7",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vuetify": "^3.6.13"
   },
   "overrides": {
     "vue": "latest"
