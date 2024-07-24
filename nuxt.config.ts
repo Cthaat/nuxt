@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    (_options, nuxt) => {
+    (_options, nuxt) => { 
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error: Vite config plugins array might be undefined
         config.plugins.push(vuetify({ autoImport: true }));
