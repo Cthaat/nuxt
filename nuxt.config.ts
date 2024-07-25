@@ -8,7 +8,9 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    '@vueuse/nuxt',
     '@element-plus/nuxt',
+    '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     (_options, nuxt) => { 
@@ -24,5 +26,15 @@ export default defineNuxtConfig({
         transformAssetUrls
       }
     }
+  },
+  colorMode: {
+    preference: 'dark', // default value of $colorMode.preference
+    fallback: 'dark', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '-mode',
+    storageKey: 'nuxt-color-mode'
   }
 });
