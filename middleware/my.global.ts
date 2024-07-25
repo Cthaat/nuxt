@@ -1,3 +1,5 @@
 export default defineNuxtRouteMiddleware((to) => { 
-    console.log(to.path);
+  if (to.path === '/user') {
+    return navigateTo('/user/profile');
+  }
 });

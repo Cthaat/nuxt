@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <NuxtLayout>
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
+useHead ({
+    title: 'Learn Nuxt'
+});
 </script>
