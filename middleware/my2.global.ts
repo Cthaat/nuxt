@@ -1,3 +1,3 @@
 export default defineNuxtRouteMiddleware(() => { 
-    console.log('This is middleware 2');
+  console.log('This is middleware 2');
 });

@@ -15,7 +15,6 @@ const add = () => {
 };
 useHead({
     title: 'Home',
-
     meta: [
         {
             name: 'description',

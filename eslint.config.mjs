@@ -18,20 +18,33 @@ export default withNuxt(
       'arrow-spacing': ['error', { 'before': true, 'after': true }],
       // 禁止多余的空行
       'no-multiple-empty-lines': ['error', { 'max': 1 }],
+      // 禁止使用 eval()
+      'no-eval': 'warn',
+      // tab 键长度为 4 个空格
+      'indent': ['warn', 4, { 'SwitchCase': 1 }],
+      // 禁止使用多个空格
+      'no-multi-spaces': 'warn',
       'max-len': [
-      'warn',
-      {
-        code: 90, // 设置最大行长度为80字符
-        ignoreUrls: true, // 不检查URL长度
-        ignoreStrings: true, // 不检查字符串长度
-        ignoreRegExpLiterals: true, // 不检查正则表达式字面量长度
-        ignoreTemplateLiterals: true // 不检查模板字面量长度
-      }
+        'warn',
+        {
+          code: 90, // 设置最大行长度为80字符
+          ignoreUrls: true, // 不检查URL长度
+          ignoreStrings: true, // 不检查字符串长度
+          ignoreRegExpLiterals: true, // 不检查正则表达式字面量长度
+          ignoreTemplateLiterals: true // 不检查模板字面量长度
+        }
       ],
       'comma-dangle': [
-      'warn',
-      'never' // 禁止尾随逗号
+        'warn',
+        'never' // 禁止尾随逗号
       ]
+    }
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.mjs'],
+    rules: {
+      // tab 键长度为 2 个空格
+      'indent': ['warn', 2, { 'SwitchCase': 1 }]
     }
   }
 );
