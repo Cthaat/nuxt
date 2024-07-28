@@ -36,5 +36,10 @@ export default defineNuxtConfig({
     classPrefix: '',
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode'
+  },
+  nitro: {
+    experimental: {
+      asyncContext: true
+    }
   }
 });
