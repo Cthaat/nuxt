@@ -3,7 +3,9 @@
         <v-btn @click="add">add</v-btn>
         <v-btn @click="countStore.subCount()">subtract</v-btn>
         <p>{{ countStore.count }}</p>
-        <v-btn text="fetch" @click="() => console.log(data?.message)"/>
+        <v-btn 
+        text="fetch" 
+        @click="() => console.log(test.message)"/>
     </div>
 </template>
 
@@ -24,7 +26,7 @@ useHead({
     ]
 });
 
-const { data } = await useFetch('/api/hello', {
+const { data: hello } = await useFetch('/api/hello', {
     method: 'POST',
     body: {
         name: 'Edge'
@@ -32,5 +34,9 @@ const { data } = await useFetch('/api/hello', {
     params: {
         id: 1
     }
+});
+
+const { data: test } = await useFetch('/api/test', {
+    method: 'GET'
 });
 </script>

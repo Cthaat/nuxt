@@ -38,8 +38,22 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode'
   },
   nitro: {
+    storage: {
+      'local': {
+        driver: 'fs',
+        base: './data'
+      }
+    },
     experimental: {
-      asyncContext: true
+      asyncContext: true,
+      database: true
     }
+  },
+  runtimeConfig: {
+    // 只有服务器端可用
+    DB_HOST: process.env.DB_HOST,
+    DB_USER: process.env.DB_USER,
+    DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME
   }
 });
