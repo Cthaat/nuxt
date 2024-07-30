@@ -5,7 +5,7 @@
         <p>{{ countStore.count }}</p>
         <v-btn 
         text="fetch" 
-        @click="() => console.log(test.message)"/>
+        @click="() => console.log(test?.rows)"/>
     </div>
 </template>
 
